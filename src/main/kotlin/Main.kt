@@ -1,5 +1,5 @@
 fun main() {
-    var MaxValue = 5
+    val MaxValue = 5
     var ArrayName = arrayOfNulls<String>(MaxValue)
     var ArrayAge = arrayOfNulls<Int>(MaxValue)
     var i = 0
