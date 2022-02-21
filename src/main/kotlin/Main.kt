@@ -1,7 +1,7 @@
 fun main() {
     val MaxValue = 5
-    var ArrayName = arrayOfNulls<String>(MaxValue)
-    var ArrayAge = arrayOfNulls<Int>(MaxValue)
+    val ArrayName = arrayOfNulls<String>(MaxValue)
+    val ArrayAge = arrayOfNulls<Int>(MaxValue)
     var i = 0
 
     while (i < ArrayAge.size) {
@@ -19,8 +19,7 @@ fun main() {
             ArrayName[i] = name
             i++}
     }
-    ArrayAge.forEachIndexed { index, i ->
-        println("${ArrayName[index]} name and surname ${ArrayAge[index]} age")}
+    ArrayAge.forEachIndexed { index, i -> println("${ArrayName[index]} name and surname ${ArrayAge[index]} age")}
 
 
 }
