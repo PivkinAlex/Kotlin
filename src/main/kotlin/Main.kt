@@ -1,7 +1,14 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+fun main () {
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    print ("Enter last name and first name")
+
+    val name = readLine ()
+    print ("Enter the age")
+    val age = readLine()!!.toInt()
+
+    if (age < 14){
+        println("call the police: $name")}
+    else if ((age >= 14)&&(age < 18)){
+        println("do not let: $name")}
+    else{println ("Welcome: $name")}
 }
