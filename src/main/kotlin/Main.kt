@@ -1,8 +1,9 @@
 fun main() {
     val MaxValue = 5
-    val ArrayName = arrayOfNulls<String>(MaxValue)
-    val ArrayAge = arrayOfNulls<Int>(MaxValue)
+    var ArrayName = arrayOfNulls<String>(MaxValue)
+    var ArrayAge = arrayOfNulls<Int>(MaxValue)
     var i = 0
+    var a = 0
 
     while (i < ArrayAge.size) {
         println("${i+1} :")
@@ -11,15 +12,19 @@ fun main() {
         print("Enter last name and first name: ")
         val name = readLine ()
         if (age < 14){
-            println("call the police: $name")}
+            println("call the police: $name")
+        }
         else if ((age >= 14)&&(age < 18)){
-            println("do not let: $name")}
+            println("do not let: $name")
+        }
         else{
             ArrayAge[i] = age
             ArrayName[i] = name
-            i++}
+            i++
+        }
     }
-    ArrayAge.forEachIndexed { index, i -> println("${ArrayName[index]} name and surname ${ArrayAge[index]} age")}
-
-
+    while (a < ArrayAge.size){
+    println("${ArrayName[a]} name and surname ${ArrayAge[a]} age")
+    a++
+    }
 }
