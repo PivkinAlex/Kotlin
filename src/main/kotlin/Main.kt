@@ -1,9 +1,8 @@
 fun main() {
     val MaxValue = 5
-    var ArrayName = arrayOfNulls<String>(MaxValue)
-    var ArrayAge = arrayOfNulls<Int>(MaxValue)
+    val ArrayName = arrayOfNulls<String>(MaxValue)
+    val ArrayAge = arrayOfNulls<Int>(MaxValue)
     var i = 0
-    var a = 0
 
     while (i < ArrayAge.size) {
         println("${i+1} :")
@@ -17,14 +16,20 @@ fun main() {
         else if ((age >= 14)&&(age < 18)){
             println("do not let: $name")
         }
+
         else{
             ArrayAge[i] = age
             ArrayName[i] = name
             i++
         }
     }
-    while (a < ArrayAge.size){
-    println("${ArrayName[a]} name and surname ${ArrayAge[a]} age")
-    a++
+    PrintList (ArrayName, ArrayAge)
+}
+fun PrintList (Array1: Array<String?>, Array2: Array<Int?>) {
+    var a = 0
+    while (a < Array1.size){
+        println("${Array1[a]} name and surname ${Array2[a]} age")
+        a++
     }
+
 }
