@@ -1,7 +1,35 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+fun main() {
+    val MaxValue = 5
+    val ArrayName = arrayOfNulls<String>(MaxValue)
+    val ArrayAge = arrayOfNulls<Int>(MaxValue)
+    var i = 0
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    while (i < ArrayAge.size) {
+        println("${i+1} :")
+        print("Enter age: ")
+        val age = readLine()!!.toInt()
+        print("Enter last name and first name: ")
+        val name = readLine ()
+        if (age < 14){
+            println("call the police: $name")
+        }
+        else if ((age >= 14)&&(age < 18)){
+            println("do not let: $name")
+        }
+
+        else{
+            ArrayAge[i] = age
+            ArrayName[i] = name
+            i++
+        }
+    }
+    PrintList (ArrayName, ArrayAge)
+}
+fun PrintList (Array1: Array<String?>, Array2: Array<Int?>) {
+    var a = 0
+    while (a < Array1.size){
+        println("${Array1[a]} name and surname ${Array2[a]} age")
+        a++
+    }
+
 }
